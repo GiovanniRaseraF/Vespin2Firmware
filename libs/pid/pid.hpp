@@ -22,9 +22,12 @@ public:
     PID &setdt(double);
 
     PID(){};
+    // TODO: copy constructor
+    // need to understand what is best to implement
+    PID(const PID &to_copy);
 
     double setPoint(double);
     double calculate(double);
 
-   friend std::ostream& operator<<(std::ostream& os, const PID& pid);
+    friend std::ostream& operator<<(std::ostream& os, const PID& pid);
 };
